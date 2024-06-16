@@ -13,7 +13,7 @@ function newElement() {
   document.getElementById("myInput").value = "";
 
   let spanEdit = document.createElement("SPAN");
-  let textEdit = document.createTextNode("edit");
+  let textEdit = document.createTextNode("✎");
   spanEdit.className = "edit";
   spanEdit.appendChild(textEdit);
   li.appendChild(spanEdit);
@@ -71,7 +71,7 @@ for (i = 0; i < nodeList.length; i++) {
 let editList = document.getElementsByTagName("LI");
 for (i = 0; i < nodeList.length; i++) {
   let spanEdit = document.createElement("SPAN");
-  let textEdit = document.createTextNode("edit");
+  let textEdit = document.createTextNode("✎");
   spanEdit.className = "edit";
   spanEdit.appendChild(textEdit);
   nodeList[i].appendChild(spanEdit);

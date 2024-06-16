@@ -1,35 +1,27 @@
+body {
+  background-color: #6b405f;
+}
+
 ul li {
   cursor: pointer;
   position: relative;
-  padding: 16px 8px 16px 40px;
-  background: #ff97d2;
+  padding: 16px;
+  background: #f89add;
   font-size: 20px;
   transition: 0.2s;
   margin-left: -40px;
+  border: #000000 2px solid;
 }
 
 ul li:hover {
-  background: #ddd;
-  padding: 24px 8px 24px 40px;
+  background: #000000;
+  color: #f89add;
 }
 
 ul li.checked {
-  background: #888;
-  color: #fff;
+  background: #000000;
+  color: #8b557c;
   text-decoration: line-through;
-}
-
-ul li.checked::before {
-  content: "";
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
 }
 
 li {
@@ -49,17 +41,18 @@ li {
   top: 0;
   padding: 16px;
   margin-right: 40px;
+  transform: rotate(360deg) scaleX(-1);
 }
 
 .close:hover {
-  background-color: #311d2b;
-  color: white;
-  padding: 24px;
+  font-size: 32px;
+  color: aliceblue;
+  padding: 8px 12px;
 }
 .edit:hover {
-  background-color: #311d2b;
-  color: white;
-  padding: 24px;
+  font-size: 32px;
+  color: aliceblue;
+  padding: 8px;
 }
 
 .header {
@@ -67,14 +60,13 @@ li {
   justify-content: center;
   flex-direction: column;
   margin: auto;
-  width: 320px;
-  background-color: #ff5fca;
+  width: 276px;
+  background-color: #f89add;
   padding: 30px 40px;
   text-align: center;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
   font-family: sans-serif;
   font-weight: 800;
+  border: black 2px solid;
 }
 
 input {
@@ -84,29 +76,44 @@ input {
   width: 75%;
   padding: 10px;
   float: left;
+  color: #000000;
   font-size: 16px;
+  background-color: #f89add;
+  border-bottom: #000000 2px solid;
+}
+
+input:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+input::placeholder {
+  color: #8b557c;
 }
 
 .addBtn {
   padding: 10px;
   width: 25%;
-  background: #d9d9d9;
-  color: #555;
+  background-color: #000000;
+  color: #f89add;
   float: left;
   text-align: center;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.1s;
   border-radius: 0;
 }
 
 .addBtn:hover {
-  background-color: #bbb;
+  background-color: #f89add;
+  color: #000000;
+  border: #000000 2px solid;
+  padding: 8px;
 }
 
 .list {
   margin: auto;
-  width: 360px;
+  width: 320px;
   list-style-type: none;
 }
 
@@ -115,14 +122,22 @@ input {
 }
 
 .calc {
-  background-color: #3700b8;
+  background-color: #f89add;
   padding: 20px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin: auto;
-  margin-top: 5vh;
-  width: 400px;
-  border-radius: 50px;
-  border: #6f91ff 32px solid;
+  width: 360px;
+  margin-top: 7%;
+  border: #000000 2px solid;
+}
+
+.scroll {
+  max-height: 360px;
+  overflow-y: scroll;
+}
+
+.title {
+  margin-bottom: 40px;
 }
